@@ -16,10 +16,23 @@ body {
 h1,
 h2 {
     font-family: 'Poppins', sans-serif;
+    line-height: 1.1em;
 }
 
 img {
     max-width: 100%;
+}
+
+header {
+    background-image: url(images/bg-hero-desktop.svg);
+    background-size: cover;
+    background-color: #hsl(193, 100%, 96%);
+    background-position: center center;
+    padding: 40px 0;
+}
+
+header img {
+    margin-left: 20px;
 }
 
 .btn {
@@ -32,8 +45,6 @@ img {
     font-weight: 700;
     padding: 15px 60px;
 }
-
-
 
 .btn-primary {
     color: #fff;
@@ -51,30 +62,26 @@ img {
     display: flex;
 }
 
-.small-box {
-    display: inline-block;
-    background-color: white;
-    position: relative;
-    z-index: 0;
-}
-
-.center {
-    text-align: center;
-}
-
 .box {
     border-radius: 20px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
     padding: 50px;
-    margin: 50px;
+    margin: 40px 100px;
 }
 
-header {
-    background-image: url(images/bg-hero-desktop.svg);
-    background-size: cover;
-    background-color: #hsl(193, 100%, 96%);
-    background-position: center center;
-    padding: 40px 0;
+.box img {
+    margin: 0 20px 0 20px;
+}
+.center {
+    text-align: center;
+}
+
+.small-box {
+    display: inline-block;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    margin-bottom: -100px;
 }
 
 nav {
@@ -84,7 +91,36 @@ nav {
 }
 
 footer {
+    position: relative;
     background-color: hsl(192, 100%, 9%);
     color: white;
-    padding-top: 100px;
+    padding: 100px 0 60px;
 }
+
+footer .flex {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col1 {
+    align-self: flex-start;
+}
+
+.col2 {
+    align-self: flex-start;
+}
+
+.col3 {
+    align-self: flex-start;
+}
+
+footer .flex img {
+    position: relative;
+    top: 40px;
+}
+
+footer .flex p {
+    position: relative;
+    left: 25px;
+}
+
