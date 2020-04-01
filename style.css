@@ -66,7 +66,7 @@ header img {
     border-radius: 20px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
     padding: 50px;
-    margin: 40px 100px;
+    margin: 40px 50px;
 }
 
 .box img {
@@ -98,29 +98,64 @@ footer {
 }
 
 footer .flex {
-    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .col1 {
-    align-self: flex-start;
+    flex: 2 1 100px;
+    align-self: baseline;
 }
 
 .col2 {
-    align-self: flex-start;
+    flex: 1 1 auto;
+    align-self: baseline;
+
 }
 
 .col3 {
-    align-self: flex-start;
+    flex: 0 1 auto;
+    align-self: baseline;
 }
 
 footer .flex img {
     position: relative;
-    top: 40px;
+    top: 5px;
 }
 
-footer .flex p {
+footer .flex .col1 p {
     position: relative;
+    top: -40px;
     left: 25px;
+    margin-right: 50px;
 }
 
+.col1 :nth-of-type(2) {
+    margin-top: -20px;
+    top: -35px;
+}
+
+.col1 :nth-of-type(3) {
+    margin-top: -20px;
+    top: -35px;
+}
+
+@media screen 
+    and (max-width: 768px) {
+    
+    nav.flex {
+        flex-direction: row;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    * {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .mobile-reverse {
+        flex-direction: column-reverse;
+    }
+}
